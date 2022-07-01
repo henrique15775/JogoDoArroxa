@@ -14,6 +14,9 @@
 		141C0FDF286A43840026E01E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C0FDE286A43840026E01E /* Persistence.swift */; };
 		141C0FE2286A43840026E01E /* JogoDoArroxaData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 141C0FE0286A43840026E01E /* JogoDoArroxaData.xcdatamodeld */; };
 		141C0FEB286A4EFE0026E01E /* Jogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C0FEA286A4EFE0026E01E /* Jogo.swift */; };
+		1447B08E286F6DD700E67516 /* Telinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447B08D286F6DD700E67516 /* Telinha.swift */; };
+		1447B091286F749800E67516 /* TelaVitoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447B090286F749800E67516 /* TelaVitoria.swift */; };
+		1447B095286F814200E67516 /* TelaDerrota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447B094286F814200E67516 /* TelaDerrota.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		141C0FE1286A43840026E01E /* JogoDoArroxaData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JogoDoArroxaData.xcdatamodel; sourceTree = "<group>"; };
 		141C0FE3286A43840026E01E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141C0FEA286A4EFE0026E01E /* Jogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jogo.swift; sourceTree = "<group>"; };
+		1447B08D286F6DD700E67516 /* Telinha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telinha.swift; sourceTree = "<group>"; };
+		1447B090286F749800E67516 /* TelaVitoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaVitoria.swift; sourceTree = "<group>"; };
+		1447B094286F814200E67516 /* TelaDerrota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaDerrota.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				141C0FE0286A43840026E01E /* JogoDoArroxaData.xcdatamodeld */,
 				141C0FDB286A43840026E01E /* Preview Content */,
 				141C0FEA286A4EFE0026E01E /* Jogo.swift */,
+				1447B08D286F6DD700E67516 /* Telinha.swift */,
+				1447B090286F749800E67516 /* TelaVitoria.swift */,
+				1447B094286F814200E67516 /* TelaDerrota.swift */,
 			);
 			path = JogoDoArroxaData;
 			sourceTree = "<group>";
@@ -150,7 +159,10 @@
 				141C0FDF286A43840026E01E /* Persistence.swift in Sources */,
 				141C0FEB286A4EFE0026E01E /* Jogo.swift in Sources */,
 				141C0FD8286A43800026E01E /* ContentView.swift in Sources */,
+				1447B095286F814200E67516 /* TelaDerrota.swift in Sources */,
+				1447B08E286F6DD700E67516 /* Telinha.swift in Sources */,
 				141C0FE2286A43840026E01E /* JogoDoArroxaData.xcdatamodeld in Sources */,
+				1447B091286F749800E67516 /* TelaVitoria.swift in Sources */,
 				141C0FD6286A43800026E01E /* JogoDoArroxaDataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

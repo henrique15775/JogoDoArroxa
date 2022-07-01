@@ -10,10 +10,10 @@ import SwiftUI
 @main
 struct JogoDoArroxaDataApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(game: Jogo())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

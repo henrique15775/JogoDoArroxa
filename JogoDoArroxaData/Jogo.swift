@@ -8,32 +8,65 @@
 import Foundation
 
 
-class Jogo: NSObject,Identifiable,ObservableObject{
+class Jogo: NSObject,ObservableObject{
      private var valorSorteado:Int
-     @Published private var limiteSuperior:Int
-     @Published private var limiteInferior:Int
-     @Published private var status: Bool
-     
-    init(valorSorteado: Int, limiteSuperior:Int, limiteInferior:Int, status: Bool){
-        self.valorSorteado = (2...99).randomElement()!
+     @Published  var limiteSuperior:Int
+     @Published  var limiteInferior:Int
+     @Published  var status: Bool
+     @Published  var tela: Telinha
+     @Published  var pontuacao:Int
+    
+    override init(){
+        //self.valorSorteado = (2...99).randomElement()!
+        self.valorSorteado = 10
         self.limiteSuperior = 100
         self.limiteInferior = 1
         self.status = false
+        self.tela = .mainGame
+        self.pontuacao = 1000
     }
+    func reiniciar(){
+        self.valorSorteado = 10
+        self.limiteSuperior = 100
+        self.limiteInferior = 1
+        self.status = false
+        self.tela = .mainGame
+        self.pontuacao = 1000
+    }
+    
+    func jogar(valorAposta: Int){
+        self.checkIfEqual(valorAposta: valorAposta)
+        if(valorAposta < self.valorSorteado){
+            self.limiteInferior = valorAposta
+            self.pontuacao -= 100
+        }
+        else if(valorAposta > self.valorSorteado){
+            self.limiteSuperior = valorAposta
+            self.pontuacao -= 100
+        }
+        if(self.pontuacao == 0){
+            self.tela = .telaDerrota
+        }else{
+            self.arroxou(valorAposta: valorAposta)
+        }
+        }
+    
     
     func arroxou(valorAposta: Int){
-        if(valorAposta == self.limiteInferior + 1 && valorAposta == self.limiteSuperior - 1 ){
+        if(self.limiteSuperior - 1 == self.limiteInferior + 1 ){
             self.status = true
+            self.tela = .telaVitoria
         }
     }
     
-    // arroxou -> checkIfEqual -> verificarLimites
-    func verificarLimites(valorAposta: Int){
-        if(self.limiteInferior < valorAposta && valorAposta < self.valorSorteado){
-            self.limiteInferior = valorAposta
+    func checkIfEqual(valorAposta:Int){
+        if(valorAposta == self.valorSorteado && self.status == false){
+            self.pontuacao = 0
+            self.tela = .telaDerrota
         }
-        if(valorAposta > self.limiteInferior && valorAposta > self.valorSorteado){
-            self.limiteSuperior = valorAposta
+        else if(valorAposta >= self.limiteSuperior || valorAposta <= limiteInferior ){
+            self.pontuacao = 0
+            self.tela = .telaDerrota
         }
     }
     
